@@ -1,7 +1,7 @@
-class Api {
-    constructor() {
-        this.url = "/"
-    }
-}
+// class Api {
+//     getCatalog() {
+//         fetch()
+//     }
+// }
 
-export default Api;
+// export default Api;

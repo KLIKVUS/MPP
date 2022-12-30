@@ -10,15 +10,15 @@
 .header__nav {
     position: absolute;
     background: #52B788;
-    width: 25%;
-    height: 100%;
+    min-height: 100%;
     top: 0;
     left: 0;
     transition: all 0.5s linear;
+    border-right: 1px solid #000000;
 }
 
 .header__nav--hidden {
-    left: -30%;
+    left: -50%;
 }
 
 .header__btn-close {
@@ -47,6 +47,7 @@
     padding: 0;
     margin-top: 50px;
     margin-left: 20px;
+    padding-right: 100px;
 }
 
 .header__item {

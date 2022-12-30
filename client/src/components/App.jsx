@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 import NotFound from "./NotFound";
 import Header from "./Header";
@@ -7,12 +7,12 @@ import Catalog from "./Catalog";
 
 import { Switch, Route, Router as BrowserRouter } from 'react-router-dom';
 import browserHistory from "../browser-history";
-import PrivateRoute from '../private-route';
-import Api from "../api";
 
 export const Ctx = createContext({});
 
 const App = () => {
+  const [categoryUrl, setCategoryUrl] = useState(localStorage.getItem("categoryUrl") || '');
+
   return (
     <Ctx.Provider value={{
 
@@ -20,12 +20,12 @@ const App = () => {
       <BrowserRouter history={browserHistory}>
         <Switch>
           <Route exact path='/'>
-            <Header/>
+            <Header setCategoryUrl={setCategoryUrl} />
             <Main/>
           </Route>
-          <Route exact path='/catalog'>
-            <Header/>
-            <Catalog/>
+          <Route exact path='/catalog/*'>
+            <Header setCategoryUrl={setCategoryUrl} />
+            <Catalog categoryUrl={categoryUrl}/>
           </Route>
           <Route>
             <NotFound />

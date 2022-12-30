@@ -2,6 +2,7 @@
   "name": "wbparse",
   "version": "0.1.0",
   "homepage": "",
+  "proxy": "http://127.0.0.1:81",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

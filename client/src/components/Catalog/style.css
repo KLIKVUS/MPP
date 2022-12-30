@@ -1,6 +1,9 @@
 .catalog {
     width: 1200px;
     margin: 0 auto;
+}
+
+.catalog__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;

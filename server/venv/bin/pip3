@@ -1,4 +1,6 @@
-#!/home/runner/Python/venv/bin/python3
+#!/bin/sh
+'''exec' "/Users/alienba6y/Documents/Max 8/Projects/wbparse/server/venv/bin/python3.11" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
